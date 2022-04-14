@@ -18,7 +18,12 @@
 
 <body>
     <div class="container">
-        <?=$data['alert']?>
+        <?php
+        if(!empty($data['alert'])){
+            echo $data['alert'];
+            header("Refresh: 1; url=". URLROOT . "/artikel/read");
+        }
+        ?>
         <div class="row">
             <h1>Overzicht van Artikelen</h1>
         </div>

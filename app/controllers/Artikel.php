@@ -5,7 +5,6 @@ class Artikel extends Controller
     public $logs = [];
     private $artikelModel;
     private $categoryModel;
-    private $messageShown = false;
 
     public function __construct()
     {
@@ -27,7 +26,7 @@ class Artikel extends Controller
     public function read($message = "")
     {
 
-        $alert = "";
+        $alert = null;
         if (!empty($message)) {
             switch ($message) {
                 case "info-failed":
